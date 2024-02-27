@@ -2,6 +2,27 @@
 
 * {
     font-family: 'NR';
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#home {
+    width: 8%;
+    height: 8%;
+    position: absolute;
+    top: 4%;
+    right: 20%;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+img {
+    pointer-events: none;
 }
 
 html {
@@ -35,7 +56,7 @@ body::-webkit-scrollbar-thumb {
     z-index: 999999;
     top: 0;
     left: -360px;
-    background: #337AB7;
+    background: #a3b18a;
     transition: all 0.8s;   
     width: 320px;
     height: 100vh;
@@ -46,10 +67,7 @@ body::-webkit-scrollbar-thumb {
     height: 100%;
 }
 .side-title {
-    font-size: 20px;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #BFE2FF;
+    font-size: 24px;
 }
 /* Оформление кнопки на странице */
 
@@ -57,20 +75,11 @@ body::-webkit-scrollbar-thumb {
     text-align: center; /* Контейнер для кнопки, чтобы было удобнее ее разместить */
 }
 
-.side-button-1 .side-b {
-    position: absolute;
-    padding-right: 0.6%;
-    padding-left: 0.6%;
-    background: #2c9f7b;
-    border-top-right-radius: 50%;
-    border-bottom-right-radius: 50%;
-    top: 87.5%;
-}
 .side-button-1 .side-b:hover,
 .side-button-1 .side-b:active,
 .side-button-1 .side-b:focus {
     cursor: pointer;
-    background: #2a9472;
+    transition: 250ms;
 }
 .side-button-1 .side-b:after,
 .side-button-1 .side-b:before {
@@ -90,7 +99,7 @@ body::-webkit-scrollbar-thumb {
     display: none;
 }
 #side-checkbox:checked + .side-panel + .side-button-1-wr .side-button-1 .side-open {
-    display: none;
+    transform: scale(1.1);
 }
 #side-checkbox:checked + .side-panel + .side-button-1-wr .side-button-1 .side-close {
     display: block;
@@ -107,14 +116,10 @@ body::-webkit-scrollbar-thumb {
     right: 8px;
     cursor: pointer;
     transform: rotate(45deg);
-    color: #BFE2FF;    
+    color: #000000;    
     transition: all 280ms ease-in-out;    
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-}
 
 .acor-container {
     margin: 20px 0;
@@ -124,7 +129,7 @@ header {
     margin: 0 auto;
     height: 0;
     color: rgba(0, 0, 0, 0);
-    background-color: #BFE2FF;
+    background-color: #c8daa9;
     line-height: 18px;
     padding: 0 30px;
     box-sizing: border-box;
@@ -139,11 +144,11 @@ header {
 }
 .acor-container label {
     cursor: pointer;
-    background-color: #337AB7;
+    background-color: #a3b18a;
     display: block;
     padding: 15px 20px;
     width: 100%;
-    color: #BFE2FF;
+    color: #000000;
     font-weight: 300;
     box-sizing: border-box;
     z-index: 100;
@@ -153,7 +158,7 @@ header {
     transition: color .35s;
 }
 .acor-container label:hover {
-    color: #FFF;
+    color: rgb(235, 225, 225);
 }
 .acor-container input{
     display: none;
@@ -163,8 +168,8 @@ header {
     float: right;
 }
 .acor-container input:checked + label {
-    background-color: #285f8f;
-    color: #FFF;
+    background-color: #717a5f;
+    color: rgb(235, 225, 225);
     box-shadow: 0 8px 26px rgba(0,0,0,0.4), 0 28px 30px rgba(0,0,0,0.3);
 }
 .acor-container input:checked + label:before {
@@ -180,6 +185,7 @@ header {
 
 .main-img {
     width: 39%;
+    pointer-events: none;
 }
 .main {
     display: flex;
@@ -193,8 +199,27 @@ header {
     font-size: 50px;
     position: absolute;
     left: 10%;
-    top: 60%;
+    top: 50%;
 }
 .welcom {
     background-color: #dad7cd;
+}
+#header-text {
+    font-size: 343%;
+}
+#header-img {
+    height: 10%;
+    width: 10%;
+}
+.class {
+    background: url(../img/vlr8o8qg9boxmndg7a9uxyw39mnsj9e3.png);
+}
+
+
+header {
+    background-color: #588157 ;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 15svh;
 }
